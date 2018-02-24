@@ -19,13 +19,13 @@ echo $_POST["Date"];
    echo $_FILES['ImgName']['name'];
     $i=0;
     echo sizeof($img);
-   /*while($i < sizeof($img)){
+while($i < sizeof($img)){
        
         $stmt = $pdo->prepare("INSERT INTO images VALUES ('', ?, ?)");
         $stmt->bindParam(1, $_POST["Date"]);
         $stmt->bindParam(2, $_POST["ImgName"]);
         $stmt->execute(); // เริ่มเพิ่มข้อมูล
+       gfgfhfghfgfgh
        
-       
-    }*/
+   
     ?>
