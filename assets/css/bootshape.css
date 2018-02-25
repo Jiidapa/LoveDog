@@ -1,12 +1,15 @@
 body {
-    background-image:url('../img/bg.png');
+    
+    /*background-image:url('../img/bg.png');*/
+    background: linear-gradient(#f4f4f4,#cdd0c0,#C0b283);
     background-repeat:repeat;
 }
 p {
     margin: 0 0 20px;
 }
 .navbar {
-    background: linear-gradient(#dcd0c0,#f4f4f4, #ffffff);
+    background: linear-gradient(#caa962,#e0ca7f,#feedb7,#feedb7, #e0ca7f, #caa962);
+    /*background: linear-gradient(#dcd0c0,#f4f4f4, #ffffff); */
     /*background-image:url('../img/bg.png');*/
     background-repeat:repeat;
 }
