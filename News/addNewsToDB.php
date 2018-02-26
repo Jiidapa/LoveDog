@@ -16,7 +16,7 @@ $stmt->bindParam(1, $_POST["Topic"]);
 $stmt->bindParam(2, $_POST["Date"]);
 $stmt->execute();
 $row= $stmt->fetch();
-$newsid= $row["newsId"];
+$newsid= $row["NewsId"];
 
 $uploads_dir = '../img/imgAnno';
 foreach ($_FILES["ImageName"]["error"] as $key => $error) {
@@ -24,7 +24,7 @@ foreach ($_FILES["ImageName"]["error"] as $key => $error) {
         $tmp_name = $_FILES["ImageName"]["tmp_name"][$key];
         $name = basename($_FILES["ImageName"]["name"][$key]);
         echo $name;
-        $stmt = $pdo->prepare("INSERT INTO img VALUES ('', ?, ?, ?) ");
+        $stmt = $pdo->prepare("INSERT INTO images VALUES ('', ?, ?, ?) ");
         $stmt->bindParam(1, $name);
         $stmt->bindParam(2, $_POST["Date"]);
         $stmt->bindParam(3, $newsid);

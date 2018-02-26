@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<title>Love Dog :: ชุมชนคนรักสุนัข</title>
+	<link rel="shortcut icon" href="../assets/img/logo/logo5.png" />
 	<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/css/style.css">
@@ -86,7 +87,7 @@
                                                 <input type="text" class="form-control" id="Topic" name="Topic" placeholder="หัวข้อ" required>
                                             </div>
                                             <div class="form-group">
-                                                <textarea class="form-control" type="textarea" id="Detail" placeholder="รายละเอียด" maxlength="500" rows="7" name="Content"></textarea>                                                         
+                                                <textarea class="form-control" type="textarea" id="Content" placeholder="รายละเอียด" maxlength="500" rows="7" name="Content"></textarea>                                                         
                                             </div>
                                             <div class="form-group">
                                                 <input type="Date" class="form-control" id="Date" name="Date">
@@ -100,7 +101,7 @@
                                             <div class="form-group">
                                             
                                     
-                                <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">เพิ่มข่าว</button>
+                                <input type="submit" id="submit"  class="btn btn-primary pull-right">
                                 </form>
                             </div>                     
                 </div>
