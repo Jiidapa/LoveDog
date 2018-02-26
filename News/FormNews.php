@@ -79,20 +79,23 @@
                 <div class="col-sm-6 col-md-6">
                     <!--middle -->
                             <div class="form-area">  
-                                <form role="form">
+                                <form role="form" action="addNewsToDB.php" method="post" enctype="multipart/form-data">
                                 <br style="clear:both">
                                             <h3 style="margin-bottom: 25px; text-align: center;">เพิ่มข่าวหรือประกาศ</h3>
                                             <div class="form-group">
                                                 <input type="text" class="form-control" id="Topic" name="Topic" placeholder="หัวข้อ" required>
                                             </div>
                                             <div class="form-group">
-                                                <textarea class="form-control" type="textarea" id="Detail" placeholder="รายละเอียด" maxlength="500" rows="7"></textarea>                                                         
+                                                <textarea class="form-control" type="textarea" id="Detail" placeholder="รายละเอียด" maxlength="500" rows="7" name="Content"></textarea>                                                         
                                             </div>
                                             <div class="form-group">
                                                 <input type="Date" class="form-control" id="Date" name="Date">
+                                                <script>
+                                                document.getElementById('Date').value = new Date().toISOString().substring(0, 10);
+                                                </script>
                                             </div>
                                             <div class="form-group">
-                                                <input type="file" class="form-control" id="ImageName" name="ImageName" multiple>
+                                                <input type="file" class="form-control" id="ImageName" name="ImageName[]" multiple>
                                             </div>
                                             <div class="form-group">
                                             
