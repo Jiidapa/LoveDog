@@ -17,7 +17,9 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
-
+	<script language="JavaScript">
+		
+	</script>
 </head>
 <body>
 	
@@ -54,6 +56,8 @@
 									<li class=""><a href="FormNews.php">Add News</a></li>
 								  </ul>							
 							</li>
+							<li><a class="menu" href="#" >Sign Up</a></li>
+							<li><a class="menu" href="#" >Login</a></li>
 					        <!--<li><a class="menu" href="#about">about us</a></li>
 					        <li><a class="menu" href="#service">our services </a></li>
 					        <li><a class="menu" href="#team">our team</a></li>
@@ -82,9 +86,24 @@
                             <div class="form-area">  
                                 <form role="form" action="addNewsToDB.php" method="post" enctype="multipart/form-data">
                                 <br style="clear:both">
-                                            <h3 style="margin-bottom: 25px; text-align: center;">เพิ่มข่าวหรือประกาศ</h3>
+											<h3 style="margin-bottom: 25px; text-align: center;">เพิ่มข่าวหรือประกาศ</h3>	
+											<div class="form-group">
+												<p><?php 
+												
+													if (!empty($_GET)) {
+														$message = $_GET["message"];
+												
+														if($message == 1 ){
+															echo "<span id='success' style='color: green'> เพิ่มข่าวเรียบร้อย </span>";
+														}else{
+															echo "<span id='warning' style='color: red'> กรุณาใส่หัวข้อข่าว </span>";
+														}
+												}
+												
+												?></p>
+                                            </div>																				
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="Topic" name="Topic" placeholder="หัวข้อ" required>
+                                                <input type="text" class="form-control" id="Topic" name="Topic" placeholder="หัวข้อ" >
                                             </div>
                                             <div class="form-group">
                                                 <textarea class="form-control" type="textarea" id="Content" placeholder="รายละเอียด" maxlength="500" rows="7" name="Content"></textarea>                                                         
@@ -101,7 +120,7 @@
                                             <div class="form-group">
                                             
                                     
-                                <input type="submit" id="submit"  class="btn btn-primary pull-right">
+                                <input type="submit" id="submit"  class="btn btn-primary pull-right" onclick="check()">
                                 </form>
                             </div>                     
                 </div>
@@ -133,5 +152,7 @@
 	<script src="../assets/js/smoothscroll.js"></script>
 	<script src="../assets/js/bootstrap.min.js"></script>
 	<script src="../assets/js/custom.js"></script>
+
+	
 </body>
 </html>

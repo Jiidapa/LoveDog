@@ -9,7 +9,12 @@
 *
 *
 ****/
-
+#warning{
+    color : red;
+}
+#success{
+    color : green;
+}
 #box1{
     margin :auto;
     width: 100%;
