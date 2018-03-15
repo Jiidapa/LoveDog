@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Love Dog :: ชุมชนคนรักสุนัข</title>
+	<link rel="shortcut icon" href="../assets/img/logo/logo5.png" />
+	<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+	<script src="../assets/js/modernizr.js"></script>
+	<!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+	<script language="JavaScript">
+		
+	</script>
+</head>
+<body>
+	
+	<!-- ====================================================
+	header section -->
+	<header class="top-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-10 header-logo">
+					<br>
+					<a href="../index.html"><img src="../assets/img/logo/logo6.png" alt="" class="img-responsive logo" style="height:80px;margin-bottom: 10px;"></a>
+                </div>	
+                <div class="col-xs-2">
+                        <nav class="navbar navbar-default">
+                            <ul class="nav navbar-nav navbar-left">
+                                <li><a class="menu" href="#" style="margin-top:20px;">Sign In</a></li> <br>
+                                <li><a class="menu active" href="register.html">Register</a></li>
+                            </ul>
+                        </nav>
+                    </div>	
+			</div>
+			<div class="row">
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <nav class="navbar navbar-default">
+                            <ul class="nav navbar-nav navbar-left">
+                                <!--<li><a class="menu" href="../index.html" >Home</a></li> -->
+                                <li><a data-toggle="dropdown" href="#" class="active dropdown-toggle">Home</a>
+                                    <ul class="dropdown-menu">
+                                        <li class=""><a href="../News/FormNews.php">News and Announcement</a></li>
+                                    </ul>							
+                                </li>
+                                <li><a class="menu" href="#" >Knowledge Resource</a></li> 
+                                <li><a class="menu" href="#" >Events</a></li> 
+                                <li><a class="menu" href="#">about us</a></li>
+                                <!--<li><a class="menu" href="#service">our services </a></li>
+                                <li><a class="menu" href="#team">our team</a></li>
+                                <li><a class="menu" href="#contact"> contact us</a></li> -->
+                            </ul>
+                        </nav>
+                    </div><!-- /navbar-collapse -->				
+                </div>
+		</div>
+	</header> <!-- end of header area -->
+
+	<section class="slider" id="home">
+		
+	</section><!-- end of slider section -->
+
+	<!-- about section -->
+	<section class="about text-center" id="about">
+		<div class="container">
+			<div class="row">
+				<h2></h2>
+				<div class=" col-md-3"><!--left --></div>
+                <div class=" col-md-6">
+                    <!--middle -->
+                            <div class="form-area">  
+                                <form role="form" actio>
+                                <br style="clear:both">
+                                    <h3 style="margin-bottom: 25px; text-align: center; font-size:50px">Registration</h3>	
+                                    <fieldset style="text-align: left;">
+                                        <legend>ข้อมูลส่วนตัว</legend>																
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="ชื่อ-นามสกุล" require pattern="[A-Za-z][ ][A-Za-z]" title="First and last name must be contains letters(Eng)">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="ssn" name="ssn" placeholder="Identification card/Passport id" require pattern="[0-9]{13}|[A-Z]{1}[0-9]{6}|[A-Z]{2}[0-9]{7}" title="Incorrect pattern">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="file" class="form-control" id="imgSSN" name="imgSSN" multiple require title="Image must be .jpg format">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" require title="Email must be @ ex.bananasoft@example.com">
+                                            </div>  
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="username" name="username" placeholder="Username" require pattern="[ก-๙A-Za-z0-9-_]{1,}" title="Please type a username must be contains letters(Thai,Eng), numbers, - and _ ">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" require pattern="[A-Za-z0-9-_]{16,}" title="Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" require pattern="[A-Za-z0-9-_]{16,}" title="Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _">
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control" id="birthday" name="birthday"  placeholder="Birthday" type="text" require  onfocus="(this.type='date')">
+                                                
+                                                <script>
+                                                    document.getElementById('Date').value = new Date().toISOString().substring(0, 10);
+                                                </script>
+                                             </div>     
+                                    </fieldset>         
+                                    <fieldset style="text-align: left;">
+                                        <legend>คำถามความปลอดภัย</legend>                                                                         
+                                            <div class="form-group">
+                                                <select class="form-control" name="question1" require>
+                                                    <option >Security Question 1 </option>
+                                                    <option value="What is the first name of your best friend in high school?">What is the first name of your best friend in high school?</option>
+                                                    <option value="What was the name of your first pet?">What was the name of your first pet?</option>
+                                                    <option value="What was the first thing you learned to cook?">What was the first thing you learned to cook?</option>
+                                                    <option value="What is the last name of your favorite elelmenttary school teacher?">What is the last name of your favorite elelmenttary school teacher?</option>
+                                                </select>                                                
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="ans1" name="ans1" placeholder="คำตอบ" require>
+                                            </div>                                            
+                                            <div class="form-group">
+                                                <select class="form-control" name="question2" require>
+                                                    <option >Security Question 2 </option>
+                                                    <option value="What is your dream job?">What is your dream job?</option>
+                                                    <option value="What is your favorite children's book?">What is your favorite children's book?</option>
+                                                    <option value="Who was your favorite film star or character in school?">Who was your favorite film star or character in school?</option>
+                                                    <option value="What was yous childhood nickname?">What was yous childhood nickname?</option>
+                                                </select>                                                
+                                            </div>    
+                                            <div class="form-group">
+                                                    <input type="text" class="form-control" id="ans1" name="ans1" placeholder="คำตอบ" require>
+                                            </div>  
+                                            <div class="form-group">
+                                                <select class="form-control" name="question3" require>
+                                                    <option >Security Question 3 </option>
+                                                    <option value="In what city is your parents meet?">In what city is your parents meet?</option>
+                                                    <option value="What is the name of the street where you grew?">What is the name of the street where you grew?</option>
+                                                    <option value="What is the name of firth beach you visited?">What is the name of firth beach you visited?</option>
+                                                    <option value="What is the name of your favorite sports team?">What is the name of your favorite sports team?</option>
+                                                </select>                                                
+                                            </div>
+                                            </fieldset>
+                                            <div class="form-group">
+                                                    <input type="text" class="form-control" id="ans3" name="ans3" placeholder="Answer" require>
+                                            </div> 
+                                            <div class="form-group" align="left">
+                                                <input type="checkbox" name="accept" value="accept"> accept<br>
+                                            </div>                              
+                                            <div class="form-group">                                       
+                                				<input type="submit" id="submit" value="Register" name="submit" class="btn btn-primary pull-right" onclick="check()">
+											</div>
+								</form>
+                            </div>                     
+                </div>
+                <div class="col-md-3"><!--right --></div>
+	</section><!-- end of about section -->
+
+	<!-- footer starts here -->
+	<footer class="footer clearfix" style="margin-top:50px; border-top: 1px solid rgb(255, 255, 255)">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-4"><!--left --></div>
+				<div class="col-sm-6 col-md-4"><!--middle -->
+					<p align="center">&copy;BananaSoft <br>
+					Contact US : BananaSoft@kku.ac.th</p>
+				</div>
+				<div class="col-sm-6 col-md-4"><!--right --></div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- script tags
+	============================================================= -->
+	<script src="../assets/js/jquery-2.1.1.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script src="../assets/js/gmaps.js"></script>
+	<script src="../assets/js/smoothscroll.js"></script>
+	<script src="../assets/js/bootstrap.min.js"></script>
+	<script src="../assets/js/custom.js"></script>
+
+	
+</body>
+</html>
+
+

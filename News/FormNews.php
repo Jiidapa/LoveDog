@@ -30,43 +30,29 @@
 			<div class="row">
 				<div class="col-xs-5 header-logo">
 					<br>
-					<a href="../index.html"><img src="../assets/img/logo/logo4.png" alt="" class="img-responsive logo" style="height:80px"></a>
-				</div>
-
-				<div class="col-md-7">
+					<a href="../index.html"><img src="../assets/img/logo/logo6.png" alt="" class="img-responsive logo" style="height:80px;margin-bottom: 10px;"></a>
+				</div>		
+			</div>
+			<div class="row">
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<nav class="navbar navbar-default">
-					  <div class="container-fluid nav-bar">
-					    <!-- Brand and toggle get grouped for better mobile display -->
-					    <div class="navbar-header">
-					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					        <span class="sr-only">Toggle navigation</span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					      </button>
-					    </div>
-
-					    <!-- Collect the nav links, forms, and other content for toggling -->
-					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					      
-					      <ul class="nav navbar-nav navbar-right">
-							<li><a class="menu" href="../index.html" >Home</a></li>
-							<li><a data-toggle="dropdown" href="#" class="active dropdown-toggle">Manage News</a>
+					      <ul class="nav navbar-nav navbar-left">
+							<!--<li><a class="menu" href="../index.html" >Home</a></li> -->
+							<li><a data-toggle="dropdown" href="#" class="active dropdown-toggle">Manage News/Annoucement</a>
 								<ul class="dropdown-menu">
 									<li class=""><a href="FormNews.php">Add News</a></li>
 								  </ul>							
 							</li>
-							<li><a class="menu" href="#" >Sign Up</a></li>
-							<li><a class="menu" href="#" >Login</a></li>
+							<!--<li><a class="menu" href="#" >Sign Up</a></li> -->
+							<!-- <li><a class="menu" href="#" >Login</a></li> -->
 					        <!--<li><a class="menu" href="#about">about us</a></li>
 					        <li><a class="menu" href="#service">our services </a></li>
 					        <li><a class="menu" href="#team">our team</a></li>
 					        <li><a class="menu" href="#contact"> contact us</a></li> -->
-					      </ul>
-					    </div><!-- /navbar-collapse -->
-					  </div><!-- / .container-fluid -->
+						  </ul>
 					</nav>
-				</div>
+				</div><!-- /navbar-collapse -->				
 			</div>
 		</div>
 	</header> <!-- end of header area -->
@@ -94,12 +80,11 @@
 														$message = $_GET["message"];
 												
 														if($message == 1 ){
-															echo "<span id='success' style='color: green'> เพิ่มข่าวเรียบร้อย </span>";
+															echo "<p style='color:green'>เพิ่มข่าวเรียบร้อย</p>";
 														}else{
-															echo "<span id='warning' style='color: red'> กรุณาใส่หัวข้อข่าว </span>";
+															echo "<p style='color:red'>กรุณาใส่หัวข้อข่าว</p>";
 														}
-												}
-												
+												}												
 												?></p>
                                             </div>																				
                                             <div class="form-group">
@@ -117,29 +102,25 @@
                                             <div class="form-group">
                                                 <input type="file" class="form-control" id="ImageName" name="ImageName[]" multiple>
                                             </div>
-                                            <div class="form-group">
-                                            
-                                    
-                                <input type="submit" id="submit"  class="btn btn-primary pull-right" onclick="check()">
-                                </form>
+                                            <div class="form-group">                                       
+                                				<input type="submit" id="submit" value="เพิ่มข่าว" name="submit" class="btn btn-primary pull-right" onclick="check()">
+											</div>
+								</form>
                             </div>                     
                 </div>
                 <div class="col-sm-6 col-md-3"><!--right --></div>
 	</section><!-- end of about section -->
 
 	<!-- footer starts here -->
-	<footer class="footer clearfix">
+	<footer class="footer clearfix" style="margin-top:50px; border-top: 1px solid rgb(255, 255, 255)">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-6 footer-para">
-					<p>&copy;Mostafizur All right reserved<br>
-					Contact US : BananaSoft</p>
+				<div class="col-sm-6 col-md-4"><!--left --></div>
+				<div class="col-sm-6 col-md-4"><!--middle -->
+					<p align="center">&copy;BananaSoft <br>
+					Contact US : BananaSoft@kku.ac.th</p>
 				</div>
-				<div class="col-xs-6 text-right">
-					<a href=""><i class="fa fa-facebook"></i></a>
-					<a href=""><i class="fa fa-twitter"></i></a>
-					<a href=""><i class="fa fa-skype"></i></a>
-				</div>
+				<div class="col-sm-6 col-md-4"><!--right --></div>
 			</div>
 		</div>
 	</footer>
@@ -156,3 +137,5 @@
 	
 </body>
 </html>
+
+
