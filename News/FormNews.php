@@ -28,10 +28,18 @@
 	<header class="top-header">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-5 header-logo">
+				<div class="col-xs-10 header-logo">
 					<br>
 					<a href="../index.html"><img src="../assets/img/logo/logo6.png" alt="" class="img-responsive logo" style="height:80px;margin-bottom: 10px;"></a>
-				</div>		
+				</div>	
+				<div class="col-xs-2">
+                        <nav class="navbar navbar-default">
+                            <ul class="nav navbar-nav navbar-left">
+                                <li><a class="menu" href="#" style="margin-top:20px;">สวัสดี Admin</a></li> <br>
+                                <li><a class="menu active" href="register.html">Sign out</a></li>
+                            </ul>
+                        </nav>
+                    </div>		
 			</div>
 			<div class="row">
 				<!-- Collect the nav links, forms, and other content for toggling -->
