@@ -1,6 +1,61 @@
 <!DOCTYPE html>
 <html> 
 <head>
+    <style>
+        .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+/* .close {
+    float:none;
+    text-align: center;
+    font-size: 900px;
+    color:rgb(241, 225, 225);
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}  */
+.c {
+    color:darkmagenta;
+    border: 1px solid burlywood;
+    margin: 10px;
+}
+.c:hover,
+.c:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: gold;
+}
+
+    </style>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -82,30 +137,30 @@
                                 <br style="clear:both">
                                     <h3 style="margin-bottom: 25px; text-align: center; font-size:50px">Registration</h3>	
                                     <fieldset style="text-align: left;">
-                                        <legend>ข้อมูลส่วนตัว</legend>																
+                                        <legend>Profile</legend>																
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="name" name="name" placeholder="ชื่อ-นามสกุล" require pattern="[A-Za-z][ ][A-Za-z]" title="First and last name must be contains letters(Eng)">
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="Firstname-Lastname" required pattern="[A-Za-z].[A-Za-z]" title="First and last name must be contains letters(Eng)">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="ssn" name="ssn" placeholder="Identification card/Passport id" require pattern="[0-9]{13}|[A-Z]{1}[0-9]{6}|[A-Z]{2}[0-9]{7}" title="Incorrect pattern">
+                                                <input type="text" class="form-control" id="ssn" name="ssn" placeholder="Identification card/Passport id" required pattern="[0-9]{13}|[A-Z]{1}[0-9]{6}|[A-Z]{2}[0-9]{7}" title="Incorrect pattern">
                                             </div>
                                             <div class="form-group">
-                                                <input type="file" class="form-control" id="imgSSN" name="imgSSN" multiple require title="Image must be .jpg format">
+                                                <input type="file" class="form-control" id="imgSSN" name="imgSSN" multiple required title="Image must be .jpg format">
                                             </div>
                                             <div class="form-group">
-                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" require title="Email must be @ ex.bananasoft@example.com">
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required title="Email must be @ ex.bananasoft@example.com">
                                             </div>  
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="username" name="username" placeholder="Username" require pattern="[ก-๙A-Za-z0-9-_]{1,}" title="Please type a username must be contains letters(Thai,Eng), numbers, - and _ ">
+                                                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required pattern="[ก-๙A-Za-z0-9-_]{1,}" title="Please type a username must be contains letters(Thai,Eng), numbers, - and _ ">
                                             </div>
                                             <div class="form-group">
-                                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" require pattern="[A-Za-z0-9-_]{16,}" title="Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _">
+                                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required pattern="[A-Za-z0-9-_]{16,}" title="Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" require pattern="[A-Za-z0-9-_]{16,}" title="Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _">
+                                                <input type="text" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" required pattern="[A-Za-z0-9-_]{16,}" title="Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _">
                                             </div>
                                             <div class="form-group">
-                                                <input class="form-control" id="birthday" name="birthday"  placeholder="Birthday" type="text" require  onfocus="(this.type='date')">
+                                                <input class="form-control" id="birthday" name="birthday"  placeholder="Birthday" type="text" required  onfocus="(this.type='date')">
                                                 
                                                 <script>
                                                     document.getElementById('Date').value = new Date().toISOString().substring(0, 10);
@@ -113,9 +168,9 @@
                                              </div>     
                                     </fieldset>         
                                     <fieldset style="text-align: left;">
-                                        <legend>คำถามความปลอดภัย</legend>                                                                         
+                                        <legend>Security Question</legend>                                                                         
                                             <div class="form-group">
-                                                <select class="form-control" name="question1" require>
+                                                <select class="form-control" name="question1" required>
                                                     <option >Security Question 1 </option>
                                                     <option value="What is the first name of your best friend in high school?">What is the first name of your best friend in high school?</option>
                                                     <option value="What was the name of your first pet?">What was the name of your first pet?</option>
@@ -124,10 +179,10 @@
                                                 </select>                                                
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="ans1" name="ans1" placeholder="คำตอบ" require>
+                                                <input type="text" class="form-control" id="ans1" name="ans1" placeholder="Answer" required>
                                             </div>                                            
                                             <div class="form-group">
-                                                <select class="form-control" name="question2" require>
+                                                <select class="form-control" name="question2" required>
                                                     <option >Security Question 2 </option>
                                                     <option value="What is your dream job?">What is your dream job?</option>
                                                     <option value="What is your favorite children's book?">What is your favorite children's book?</option>
@@ -136,10 +191,10 @@
                                                 </select>                                                
                                             </div>    
                                             <div class="form-group">
-                                                    <input type="text" class="form-control" id="ans1" name="ans1" placeholder="คำตอบ" require>
+                                                    <input type="text" class="form-control" id="ans1" name="ans1" placeholder="Answer" required>
                                             </div>  
                                             <div class="form-group">
-                                                <select class="form-control" name="question3" require>
+                                                <select class="form-control" name="question3" required>
                                                     <option >Security Question 3 </option>
                                                     <option value="In what city is your parents meet?">In what city is your parents meet?</option>
                                                     <option value="What is the name of the street where you grew?">What is the name of the street where you grew?</option>
@@ -149,10 +204,10 @@
                                             </div>
                                             </fieldset>
                                             <div class="form-group">
-                                                    <input type="text" class="form-control" id="ans3" name="ans3" placeholder="Answer" require>
+                                                    <input type="text" class="form-control" id="ans3" name="ans3" placeholder="Answer" required>
                                             </div> 
                                             <div class="form-group" align="left">
-                                                <input type="checkbox" name="accept" value="accept"> accept<br>
+                                                <input type="checkbox" name="accept" value="accept" oninvalid="this.setCustomValidity('กรุณายอมรับข้อตกลง')" onclick="showPolicy();" id="myBtn" required> Accept policies.<br>
                                             </div>                              
                                             <div class="form-group">                                       
                                 				<input type="submit" id="submit" value="Register" name="submit" class="btn btn-primary pull-right" onclick="check()">
@@ -160,6 +215,16 @@
 								</form>
                             </div>                     
                 </div>
+                <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                          
+                          <p>Some text in the Modal..</p>
+                          <input type="button" value="ok" class="c" >
+                        </div>
+                      
+                      </div>
                 <div class="col-md-3"><!--right --></div>
 	</section><!-- end of about section -->
 
@@ -176,7 +241,28 @@
 			</div>
 		</div>
 	</footer>
-
+    <script>
+            // Get the modal
+            var modal = document.getElementById('myModal');
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("c")[0];
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            </script>
 	<!-- script tags
 	============================================================= -->
 	<script src="../assets/js/jquery-2.1.1.js"></script>
