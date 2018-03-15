@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-	<title>Love Dog :: ชุมชนคนรักสุนัข</title>
+	<title>ชุมชนคนรักสุนัข</title>
 	<link rel="shortcut icon" href="../assets/img/logo/logo5.png" />
 	<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">

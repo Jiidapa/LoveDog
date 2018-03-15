@@ -16,51 +16,56 @@
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin-top: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
-    border: 1px solid #888;
-    width: 80%;
-}
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        border: 1px solid #888;
+        width: 80%;
+    }
 
-/* The Close Button */
-/* .close {
-    float:none;
-    text-align: center;
-    font-size: 900px;
-    color:rgb(241, 225, 225);
-    font-weight: bold;
-}
+    /* The Close Button */
+    /* .close {
+        float:none;
+        text-align: center;
+        font-size: 900px;
+        color:rgb(241, 225, 225);
+        font-weight: bold;
+    }
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}  */
-.c {
-    color:darkmagenta;
-    border: 1px solid burlywood;
-    margin: 10px;
-}
-.c:hover,
-.c:focus{
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-    background-color: gold;
-}
-
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }  */
+    .c {
+        color:darkmagenta;
+        border: 1px solid burlywood;
+        margin: 10px;
+    }
+    .c:hover,
+    .c:focus{
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        background-color: gold;
+    }
+    .scrollbar{
+        background-color: lightblue;
+        width: 900px;
+        height: 500px;
+        overflow: auto;
+    }
     </style>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-	<title>Love Dog :: ชุมชนคนรักสุนัข</title>
+	<title>ชุมชนคนรักสุนัข</title>
 	<link rel="shortcut icon" href="../assets/img/logo/logo5.png" />
 	<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -73,7 +78,20 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
 	<script language="JavaScript">
-		
+		function checkPassword(){
+            var password = document.getElementById("password");
+            var confirmpassword = document.getElementById("confirmpassword");
+            var result = document.getElementById("result");
+            if(password.value==confirmpassword.value){
+                console.log(password);
+                console.log(confirmpassword);
+                result.innerHTML = " ";
+            }else{
+                console.log(password);
+                console.log(confirmpassword);
+                result.innerHTML = "Password และ Confirm Password ไม่ตรงกัน";
+            }
+        }
 	</script>
 </head>
 <body>
@@ -139,7 +157,7 @@
                                     <fieldset style="text-align: left;">
                                         <legend>Profile</legend>																
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="name" name="name" placeholder="Firstname-Lastname" required pattern="[A-Za-z].[A-Za-z]" title="First and last name must be contains letters(Eng)">
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="Firstname-Lastname" required pattern="[a-zA-Z]+[ ][a-zA-Z]+" title="First and last name must be contains letters(Eng)">
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-control" id="ssn" name="ssn" placeholder="Identification card/Passport id" required pattern="[0-9]{13}|[A-Z]{1}[0-9]{6}|[A-Z]{2}[0-9]{7}" title="Incorrect pattern">
@@ -154,11 +172,12 @@
                                                 <input type="text" class="form-control" id="username" name="username" placeholder="Username" required pattern="[ก-๙A-Za-z0-9-_]{1,}" title="Please type a username must be contains letters(Thai,Eng), numbers, - and _ ">
                                             </div>
                                             <div class="form-group">
-                                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required pattern="[A-Za-z0-9-_]{16,}" title="Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _">
-                                            </div>
+                                                <input type="password" class="form-control" id="password" name="password" placeholder="Password" onchange ="checkPassword()" required pattern="[A-Za-z0-9-_]{16,}" title="Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _">
+                                            </div>                                            
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" required pattern="[A-Za-z0-9-_]{16,}" title="Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _">
+                                                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" required pattern="[A-Za-z0-9-_]{16,}" title="Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _">
                                             </div>
+                                            <div class="form-group" id="result" style="color:red;"></div>
                                             <div class="form-group">
                                                 <input class="form-control" id="birthday" name="birthday"  placeholder="Birthday" type="text" required  onfocus="(this.type='date')">
                                                 
@@ -218,16 +237,38 @@
                 <div id="myModal" class="modal">
 
                         <!-- Modal content -->
-                        <div class="modal-content">
+                        <div class="modal-content text-left scrollbar">                         
                           
-                          <p>Some text in the Modal..</p>
-                          <input type="button" value="ok" class="c" >
+                            <h3 align="center">Policies</h3>
+                            <p  style="font-size:18px; " >
+                                    Originally a dog lover community is on social network to people who have the same interest for exchange information and include center of related activities. Because in present there are currently many social media users. Its makes crime to provide incorrect information to users in this social network (include write fake news, sale fake product and created fake event) for money and this situation is very dangerous because people who tricked by crime can’t check the person responsible. And can’t confirm security to participle in various activities.<br><br>
+                                    With this reason a community leader make sure you have a good website that you can use to solve the problem. A group of community leaders have an infrastructure system. Such as Web Server, Database Server and Domain name registered and the investment for this project is 3 million baht and want the system is ready for use on May 1, 2017.
+                            </p>
+                            <h3>Requirement</h3>
+                            <ul>
+                                    <li>User should divided into 4 type (include Site visitor, Member, VIP Member, Administrator).</li>
+                                    <li>Member and Starred members should registered with own ID card number but can set username and password for use this website.</li>
+                                    <li>Only one administrator can grant membership.</li>
+                                    <li>After membership Users who create benefits to the community that meet the criteria will be elevated. Admin will promote status form member to a starred member.</li>
+                                    <li>The system must keep the personal information of each member securely. Not accessible if not allow form admin because this information is used for monitoring and tracking only and not disclosed to the public.</li>
+                                    <li>Community homepage must show the main menu, news, about, event information.</li>
+                                    <li>Visitors to the website can view the main menu, news, about, event information only. But can’t join the event or write a comment on content that is readable. </li>
+                                    <li>All members can write and publish their own articles publicly, or only members can comment on other members' articles and can purchase tickets to participate in community activities.</li>
+                                    <li>Starred User and Administrators only have the right to organize events for the community.</li>
+                                    <li>Community events activities are free and tickets are required to attend the event. </li>
+                                    <li>Starred User can invite people to become members, if the members are starred members. Payments required activities Get 10% off the ticket price to join the event up to 3 times a year.</li>
+                                    <li>If starred members make community abuse or create trouble for the community. Administrators are entitled to reduce the member's level. Members can also be revoked.</li>
+                                    <li>The system must accommodate up to 5,000 simultaneous connections, responding back in time. Up to 5 seconds.</li>
+                                    <li>The system must be highly secure. To ensure the user.</li>
+                                    <li>The system must work 24 hours with Downtime up to 15 minutes per session, up to 1 time per week.</li>      
+                            </ul>                                                                 
+                          <center><input type="button" value="ok" class="c" ></center>
                         </div>
                       
                       </div>
                 <div class="col-md-3"><!--right --></div>
-	</section><!-- end of about section -->
-
+    </section><!-- end of about section -->
+    
 	<!-- footer starts here -->
 	<footer class="footer clearfix" style="margin-top:50px; border-top: 1px solid rgb(255, 255, 255)">
 		<div class="container">
