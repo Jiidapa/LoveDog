@@ -28,7 +28,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'BenchNine', sans-serif;
+    font-family: 'kanit', sans-serif;
 }
 li {
     list-style: none;
@@ -60,7 +60,7 @@ h2 {
     margin: auto;
 }
 .top-header img.logo {
-    margin-bottom: 5px;
+    margin-bottom: -5px;
     margin-top: -15px;
     transition: all .5s ease 0s;
     -webkit-transition: all .5s ease 0s;
@@ -71,7 +71,7 @@ h2 {
 .navbar-default {
     background-color: transparent;
     border-color: transparent;
-    margin-bottom: 0;
+    margin-bottom: -18px;
     margin-top: 8px;
     transition: all .5s ease 0s;
     -webkit-transition: all .5s ease 0s;
@@ -90,16 +90,16 @@ ul.nav {
     padding: 0;
 }
 .navbar-default .navbar-nav>li>a {
-    font-size: 24px;
+    font-size: 20px;
     color: #737373;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     transition: all .7s ease 0s;
     -webkit-transition: all .7s ease 0s;
     -moz-transition: all .7s ease 0s;
     -o-transition: all .7s ease 0s;
     -ms-transition: all .7s ease 0s;
     padding: 14px 15px;
-    font-weight: bold;
+
 }
 .navbar-default .navbar-nav>li>a:hover {
     color: #c5c4c4;
@@ -204,7 +204,7 @@ li a.active {
 /*about area*/
 
 .about h2 {
-    font-size: 90px;
+    font-size: 20px;
     color: #5b5a59;
     margin-top: 150px;
 }
@@ -726,7 +726,7 @@ responsive area
 
 @media (min-width: 768px) and (max-width: 991px) {
     .navbar-default .navbar-nav>li>a {
-        font-size: 16px;
+        font-size: 20x;
         padding: 10px 8px;
     }
     .carousel-caption h1 {
@@ -743,7 +743,7 @@ responsive area
         font-size: 22px;
     }
     h2 {
-        font-size: 70px !important;
+        font-size: 20px !important;
     }
     h4 {
         font-size: 18px !important;
@@ -915,3 +915,66 @@ responsive area
         font-size: 10px;
     }
 }
+
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/*เริ่มเขียนเอง*/
+    /* Modal Content */
+
+    .box1 { width: 600 px ; 
+        height: 130 px ;  
+        margin: 20 px ; 
+        padding: 20 px ;
+    .modal-content {
+        background-color: #fefefe;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    /* .close {
+        float:none;
+        text-align: center;
+        font-size: 900px;
+        color:rgb(241, 225, 225);
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }  */
+
+    .c {
+        color: black;
+        margin: 10px;
+    }
+    .c:hover,
+    .c:focus{
+        color: #000;
+        cursor: pointer;
+    }
+    .scrollbar{
+        background-color: white;
+        width: 70%;
+        height: 500px;
+        overflow: auto;
+    }

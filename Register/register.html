@@ -1,66 +1,6 @@
 <!DOCTYPE html>
 <html> 
 <head>
-    <style>
-        .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-    /* Modal Content */
-    .modal-content {
-        background-color: #fefefe;
-        margin-top: 100px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 10px;
-        border: 1px solid #888;
-        width: 80%;
-    }
-
-    /* The Close Button */
-    /* .close {
-        float:none;
-        text-align: center;
-        font-size: 900px;
-        color:rgb(241, 225, 225);
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }  */
-    .c {
-        color:darkmagenta;
-        border: 1px solid burlywood;
-        margin: 10px;
-    }
-    .c:hover,
-    .c:focus{
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-        background-color: gold;
-    }
-    .scrollbar{
-        background-color: lightblue;
-        width: 900px;
-        height: 500px;
-        overflow: auto;
-    }
-    </style>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -72,6 +12,7 @@
 	<link rel="stylesheet" href="../assets/css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Athiti|Kanit|Trirong" rel="stylesheet"><!--font-->
 	<script src="../assets/js/modernizr.js"></script>
 	<!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -92,49 +33,70 @@
                 result.innerHTML = "Password และ Confirm Password ไม่ตรงกัน";
             }
         }
+        
+//        For Imge uplod  register
+         function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(300)
+                        .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
 	</script>
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <style>
+        article, aside, figure, footer, header, hgroup, menu, nav, section { display: block; }
+</style>
 </head>
 <body>
 	
 	<!-- ====================================================
 	header section -->
 	<header class="top-header">
-		<div class="container">
+		<div class="container"><!-- ลองคอมมิทตามอายบอก-->
 			<div class="row">
-				<div class="col-xs-10 header-logo">
-					<br>
-					<a href="../index.html"><img src="../assets/img/logo/logo6.png" alt="" class="img-responsive logo" style="height:80px;margin-bottom: 10px;"></a>
-                </div>	
-                <div class="col-xs-2">
-                        <nav class="navbar navbar-default">
-                            <ul class="nav navbar-nav navbar-left">
-                                <li><a class="menu" href="#" style="margin-top:20px;">Sign In</a></li> <br>
-                                <li><a class="menu active" href="register.html">Register</a></li>
-                            </ul>
-                        </nav>
-                    </div>	
+				<div class="col-xs-4">
+					<a href="../index.html"><img src="../assets/img/logo/logo6.png" alt="" class="img-responsive logo" style="height:70px;"></a>
+				</div>
+				<div class="col-xs-8">
+					<nav class="navbar navbar-default">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a class="menu" href="#" style="margin-top:15px;">Sign in</a></li> <br>
+							<li><a class="menu active" href="register.html">Register</a></li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 			<div class="row">
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <nav class="navbar navbar-default">
-                            <ul class="nav navbar-nav navbar-left">
-                                <!--<li><a class="menu" href="../index.html" >Home</a></li> -->
-                                <li><a data-toggle="dropdown" href="#" class="active dropdown-toggle">Home</a>
-                                    <ul class="dropdown-menu">
-                                        <li class=""><a href="../News/FormNews.php">News and Announcement</a></li>
-                                    </ul>							
-                                </li>
-                                <li><a class="menu" href="#" >Knowledge Resource</a></li> 
-                                <li><a class="menu" href="#" >Events</a></li> 
-                                <li><a class="menu" href="#">about us</a></li>
-                                <!--<li><a class="menu" href="#service">our services </a></li>
-                                <li><a class="menu" href="#team">our team</a></li>
-                                <li><a class="menu" href="#contact"> contact us</a></li> -->
-                            </ul>
-                        </nav>
-                    </div><!-- /navbar-collapse -->				
-                </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<nav class="navbar navbar-default">
+					      <ul class="nav navbar-nav navbar-left">
+							<!--<li><a class="menu" href="../index.html" >Home</a></li> -->
+							<li><a data-toggle="dropdown" href="#" class="dropdown-th">Home&nbsp;&nbsp;|</a>
+								<ul class="dropdown-menu">
+									<li class=""><a href="../News/FormNews.php" >News and Announcement</a></li>
+								  </ul>							
+							</li>
+							<li><a class="menu" href="#" >Knowledge Resource&nbsp;&nbsp;|</a></li> 
+							<li><a class="menu" href="#" >Events&nbsp;&nbsp;|</a></li> 
+					        <li><a class="menu" href="#">About us</a></li>
+					        <!--<li><a class="menu" href="#service">our services </a></li>
+					        <li><a class="menu" href="#team">our team</a></li>
+					        <li><a class="menu" href="#contact"> contact us</a></li> -->
+						  </ul>
+					</nav>
+				</div><!-- /navbar-collapse -->				
+			</div>
 		</div>
 	</header> <!-- end of header area -->
 
@@ -155,15 +117,25 @@
                                 <br style="clear:both">
                                     <h3 style="margin-bottom: 25px; text-align: center; font-size:50px">Registration</h3>	
                                     <fieldset style="text-align: left;">
-                                        <legend>Profile</legend>																
+                                        <legend>Profile</legend>															
+    
                                             <div class="form-group">
                                                 <input type="text" class="form-control" id="name" name="name" placeholder="Firstname-Lastname" required pattern="[a-zA-Z]+[ ][a-zA-Z]+" title="First and last name must be contains letters(Eng)">
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-control" id="ssn" name="ssn" placeholder="Identification card/Passport id" required pattern="[0-9]{13}|[A-Z]{1}[0-9]{6}|[A-Z]{2}[0-9]{7}" title="Incorrect pattern">
                                             </div>
-                                            <div class="form-group">
-                                                <input type="file" class="form-control" id="imgSSN" name="imgSSN" multiple required title="Image must be .jpg format">
+                                            <div class="form-group" style="margin-bottom: 0px">
+                                                <label for="profile_pic" style="font-size:14px;">Choose file Identification card/Passport id to upload</label>                                          
+<!--
+                                                <input type="file" accept=".png, .jpg, .jpeg" id="imgSSN" name="imgSSN" multiple required title="Image must be .jpg format" onchange="readURL(this);" style="color: transparent;">
+                                                <img id="blah" src="#" alt="your image" style="margin-bottom: 10px;margin-top: 10px">
+-->
+                                                
+                                                <input type="file" name="upload" style="display:none" accept=".png, .jpg, .jpeg" id="imgSSN" name="imgSSN" multiple required title="Image must be .jpg format">
+                                                <input type="text" name="uploadtext" onkeydown="upload.value=uploadtext.value " class="form-control" style="margin-top: 5px;margin-bottom: 5px">
+                                                <input type="button" name="uploadbutton" value="choose file" onclick="upload.click()" onmouseout="uploadtext.value=upload.value"
+                                                style="margin-bottom: 10px;">
                                             </div>
                                             <div class="form-group">
                                                 <input type="email" class="form-control" id="email" name="email" placeholder="Email" required title="Email must be @ ex.bananasoft@example.com">
@@ -229,7 +201,7 @@
                                                 <input type="checkbox" name="accept" value="accept" oninvalid="this.setCustomValidity('กรุณายอมรับข้อตกลง')" onclick="showPolicy();" id="myBtn" required> Accept policies.<br>
                                             </div>                              
                                             <div class="form-group">                                       
-                                				<input type="submit" id="submit" value="Register" name="submit" class="btn btn-primary pull-right" onclick="check()">
+                                				<input type="submit" id="Register" value="Register" name="Register" class="btn btn-primary pull-right" onclick="check()">
 											</div>
 								</form>
                             </div>                     
@@ -239,30 +211,30 @@
                         <!-- Modal content -->
                         <div class="modal-content text-left scrollbar">                         
                           
-                            <h3 align="center">Policies</h3>
-                            <p  style="font-size:18px; " >
+                            <h3 align="center"><U>Policies</U></h3>
+                            <p>
                                     Originally a dog lover community is on social network to people who have the same interest for exchange information and include center of related activities. Because in present there are currently many social media users. Its makes crime to provide incorrect information to users in this social network (include write fake news, sale fake product and created fake event) for money and this situation is very dangerous because people who tricked by crime can’t check the person responsible. And can’t confirm security to participle in various activities.<br><br>
                                     With this reason a community leader make sure you have a good website that you can use to solve the problem. A group of community leaders have an infrastructure system. Such as Web Server, Database Server and Domain name registered and the investment for this project is 3 million baht and want the system is ready for use on May 1, 2017.
                             </p>
                             <h3>Requirement</h3>
                             <ul>
-                                    <li>User should divided into 4 type (include Site visitor, Member, VIP Member, Administrator).</li>
-                                    <li>Member and Starred members should registered with own ID card number but can set username and password for use this website.</li>
-                                    <li>Only one administrator can grant membership.</li>
-                                    <li>After membership Users who create benefits to the community that meet the criteria will be elevated. Admin will promote status form member to a starred member.</li>
-                                    <li>The system must keep the personal information of each member securely. Not accessible if not allow form admin because this information is used for monitoring and tracking only and not disclosed to the public.</li>
-                                    <li>Community homepage must show the main menu, news, about, event information.</li>
-                                    <li>Visitors to the website can view the main menu, news, about, event information only. But can’t join the event or write a comment on content that is readable. </li>
-                                    <li>All members can write and publish their own articles publicly, or only members can comment on other members' articles and can purchase tickets to participate in community activities.</li>
-                                    <li>Starred User and Administrators only have the right to organize events for the community.</li>
-                                    <li>Community events activities are free and tickets are required to attend the event. </li>
-                                    <li>Starred User can invite people to become members, if the members are starred members. Payments required activities Get 10% off the ticket price to join the event up to 3 times a year.</li>
-                                    <li>If starred members make community abuse or create trouble for the community. Administrators are entitled to reduce the member's level. Members can also be revoked.</li>
-                                    <li>The system must accommodate up to 5,000 simultaneous connections, responding back in time. Up to 5 seconds.</li>
-                                    <li>The system must be highly secure. To ensure the user.</li>
-                                    <li>The system must work 24 hours with Downtime up to 15 minutes per session, up to 1 time per week.</li>      
+                                    <li>- User should divided into 4 type (include Site visitor, Member, VIP Member, Administrator).</li>
+                                    <li>- Member and Starred members should registered with own ID card number but can set username and password for use this website.</li>
+                                    <li>- Only one administrator can grant membership.</li>
+                                    <li>- After membership Users who create benefits to the community that meet the criteria will be elevated. Admin will promote status form member to a starred member.</li>
+                                    <li>- The system must keep the personal information of each member securely. Not accessible if not allow form admin because this information is used for monitoring and tracking only and not disclosed to the public.</li>
+                                    <li>- Community homepage must show the main menu, news, about, event information.</li>
+                                    <li>- Visitors to the website can view the main menu, news, about, event information only. But can’t join the event or write a comment on content that is readable. </li>
+                                    <li>- All members can write and publish their own articles publicly, or only members can comment on other members' articles and can purchase tickets to participate in community activities.</li>
+                                    <li>- Starred User and Administrators only have the right to organize events for the community.</li>
+                                    <li>- Community events activities are free and tickets are required to attend the event. </li>
+                                    <li>- Starred User can invite people to become members, if the members are starred members. Payments required activities Get 10% off the ticket price to join the event up to 3 times a year.</li>
+                                    <li>- If starred members make community abuse or create trouble for the community. Administrators are entitled to reduce the member's level. Members can also be revoked.</li>
+                                    <li>- The system must accommodate up to 5,000 simultaneous connections, responding back in time. Up to 5 seconds.</li>
+                                    <li>- The system must be highly secure. To ensure the user.</li>
+                                    <li>- The system must work 24 hours with Downtime up to 15 minutes per session, up to 1 time per week.</li>      
                             </ul>                                                                 
-                          <center><input type="button" value="ok" class="c" ></center>
+                          <center><input type="button" value="ok" class="btn btn-primary pull-center c"></center>
                         </div>
                       
                       </div>
@@ -312,7 +284,11 @@
 	<script src="../assets/js/smoothscroll.js"></script>
 	<script src="../assets/js/bootstrap.min.js"></script>
 	<script src="../assets/js/custom.js"></script>
-
+    <script type="text/javascript">
+        document.getElementById("Register").onclick = function () {
+            location.href = "correct_registation.html";
+        };
+    </script>
 	
 </body>
 </html>

@@ -28,13 +28,13 @@
 	<header class="top-header">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-10 header-logo">
+				<div class="col-xs-4 header-logo">
 					<br>
-					<a href="../index.html"><img src="../assets/img/logo/logo6.png" alt="" class="img-responsive logo" style="height:80px;margin-bottom: 10px;"></a>
+					<a href="../index.html"><img src="../assets/img/logo/logo6.png" alt="" class="img-responsive logo" style="height:80px;margin-bottom: -10px;"></a>
 				</div>	
-				<div class="col-xs-2">
+				<div class="col-xs-8">
                         <nav class="navbar navbar-default">
-                            <ul class="nav navbar-nav navbar-left">
+                            <ul class="nav navbar-nav navbar-right">
                                 <li><a class="menu" href="#" style="margin-top:20px;">สวัสดี Admin</a></li> <br>
                                 <li><a class="menu active" href="register.html">Sign out</a></li>
                             </ul>
@@ -47,7 +47,7 @@
 					<nav class="navbar navbar-default">
 					      <ul class="nav navbar-nav navbar-left">
 							<!--<li><a class="menu" href="../index.html" >Home</a></li> -->
-							<li><a data-toggle="dropdown" href="#" class="active dropdown-toggle">Manage News/Annoucement</a>
+							<li><a data-toggle="dropdown" href="#" class="dropdown-toggle">Manage News/Annoucement</a>
 								<ul class="dropdown-menu">
 									<li class=""><a href="FormNews.php">Add News</a></li>
 								  </ul>							
