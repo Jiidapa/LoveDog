@@ -17,9 +17,41 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
-	<script language="JavaScript">
-		
-	</script>
+	<style>
+        .dropbtn1 {
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+    
+    .dropdown1 {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown-content1 {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    .dropdown-content1 a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropdown-content1 a:hover {background-color: #ddd}
+    
+    .dropdown1:hover .dropdown-content1 {
+        display: block;
+    }
+    </style>
 </head>
 <body>
 	
@@ -30,13 +62,13 @@
 			<div class="row">
 				<div class="col-xs-4 header-logo">
 					<br>
-					<a href="../index.html"><img src="../assets/img/logo/logo6.png" alt="" class="img-responsive logo" style="height:80px;margin-bottom: -10px;"></a>
+					<a href="../index.html"><img src="../assets/img/logo/logo6.png" alt="" class="img-responsive logo" style="height:px;margin-bottom: -10px;"></a>
 				</div>	
 				<div class="col-xs-8">
                         <nav class="navbar navbar-default">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a class="menu" href="#" style="margin-top:20px;">สวัสดี Admin</a></li> <br>
-                                <li><a class="menu active" href="register.html">Sign out</a></li>
+                                <li><a class="menu active" href="#" style="margin-top:20px;">สวัสดี Admin</a></li> <br>
+                                <li><a class="menu" href="register.html">Sign out</a></li>
                             </ul>
                         </nav>
                     </div>		
@@ -47,17 +79,11 @@
 					<nav class="navbar navbar-default">
 					      <ul class="nav navbar-nav navbar-left">
 							<!--<li><a class="menu" href="../index.html" >Home</a></li> -->
-							<li><a data-toggle="dropdown" href="#" class="dropdown-toggle">Manage News/Annoucement</a>
-								<ul class="dropdown-menu">
-									<li class=""><a href="FormNews.php">Add News</a></li>
-								  </ul>							
-							</li>
-							<!--<li><a class="menu" href="#" >Sign Up</a></li> -->
-							<!-- <li><a class="menu" href="#" >Login</a></li> -->
-					        <!--<li><a class="menu" href="#about">about us</a></li>
-					        <li><a class="menu" href="#service">our services </a></li>
-					        <li><a class="menu" href="#team">our team</a></li>
-					        <li><a class="menu" href="#contact"> contact us</a></li> -->
+							<li class="dropdown1"><a data-toggle="dropdown" href="#" class="dropbtn1">Manage News/Annoucement</a>
+								<ul class="dropdown-content1">
+								<li class=""><a href="FormNews.php">Add News&Annoucement</a></li>
+								</ul>							
+                            </li>
 						  </ul>
 					</nav>
 				</div><!-- /navbar-collapse -->				

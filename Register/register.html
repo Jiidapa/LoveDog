@@ -70,22 +70,6 @@
                 result.innerHTML = "Passwords do not match";
             }
         }
-        
-//        For Imge uplod  register
-         function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-
-                reader.onload = function (e) {
-                    $('#blah')
-                        .attr('src', e.target.result)
-                        .width(300)
-                        .height(200);
-                };
-
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
 	</script>
     <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -151,13 +135,13 @@
                         <div class="form-area">  
                             <form role="form" action="registerToDB.php" method="post" enctype="multipart/form-data">
                                 <br style="clear:both">
-                                    <h3 style="margin-bottom: 25px; text-align: center; font-size:50px">Registration</h3>	
+                                    <h3 style="margin-bottom: 25px; margin-top:150px; text-align: center; font-size:50px">Registration</h3>	
                                     <fieldset style="text-align: left;">
                                         <legend>Profile</legend>															
     
                                             <div class="form-group">
-                                                <label for="profile_pic" style="font-size:14px;">Firstname-Lastname</label>
-                                                <input type="text" class="form-control" id="name" name="name" placeholder="Firstname-Lastname" required pattern="[a-zA-Z]+[ ][a-zA-Z]+" title="First and last name must be contains letters(Eng)">
+                                                <label for="profile_pic" style="font-size:14px;">Fullname</label>
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="Fullname" required pattern="[a-zA-Z]+[ ][a-zA-Z]+" title="First and last name must be contains letters(Eng)">
                                             </div>
                                             <div class="form-group">
                                                 <label for="profile_pic" style="font-size:14px;">Identification card/Passport id</label>
@@ -165,14 +149,15 @@
                                             </div>
                                             <div class="form-group" style="margin-bottom: 0px">
                                                 <label for="profile_pic" style="font-size:14px;">Choose file Identification card/Passport id to upload</label>                                          
-
-                                                <!-- <input type="file" name="imgSSN"  value="Choose file" accept=".png, .jpg, .jpeg" id="imgSSN"  required title="Image must be .jpg format" onchange="readURL(this);" style="color: transparent;">
-                                                <img id="blah" src="#" alt="your image" style="margin-bottom: 10px;margin-top: 10px"> -->
-                                                
-                                                <input type="file" name="upload" style="display:none" accept=".png, .jpg, .jpeg" required title="Image must be .jpg format" onchange="readURL(this);" style="color: transparent;"/>
-                                                <input type="text" class="form-control" name="uploadtext" onkeydown="upload.value=uploadtext.value " />
-                                                <input type="button" name="uploadbutton" value="choose file" onclick="upload.click()" onmouseout="uploadtext.value=upload.value" style="margin-bottom: 10px;margin-top: 10px"/>
-
+                                                <!-- <input type="file" name="imgSSN" style="display:none" accept=".png, .jpg, .jpeg" required title="Image must be .jpg format" onchange="readURL(this);" style="color: transparent;"/>
+                                                <input type="text" class="form-control" name="uploadtext" onkeydown="imgSSN.value=uploadtext.value " />
+                                                <input type="button" name="uploadbutton" value="choose file" onclick="imgSSN.click()" onmouseout="uploadtext.value=imgSSN.value" style="margin-bottom: 10px;margin-top: 10px"/> 
+                                                -->
+                                                <br>
+                                                <!-- <input type="file" name="imgSSN" style="display:none" id="img" accept=".png, .jpg, .jpeg" required title="Image must be .jpg format"   style="color: transparent;"/>
+                                                <input type="button" name="uploadbutton" value="choose file" onclick="imgSSN.click()"  style="margin-bottom: 10px;margin-top: 10px"/>
+                                                <p id="showimgssn" ></p> -->
+                                                <input type="file"  name="imgSSN"  id="img" accept=".png, .jpg, .jpeg" required title="Image must be .jpg format">
                                             </div>
                                             <div class="form-group">
                                                     <label for="profile_pic" style="font-size:14px;">Email</label>
@@ -192,6 +177,7 @@
                                             </div>
                                             <div class="form-group" id="result" style="color:red;"></div>
                                             <div class="form-group">
+                                                <label for="profile_pic" style="font-size:14px;">Birthday</label>
                                                 <input class="form-control" id="birthday" name="birthday"  placeholder="Birthday" type="text" required  onfocus="(this.type='date')">
                                                 
                                                 <script>
@@ -202,8 +188,9 @@
                                     <fieldset style="text-align: left;">
                                         <legend>Security Question</legend>                                                                         
                                             <div class="form-group">
+                                                <label for="profile_pic" style="font-size:14px;">Question 1</label>
                                                 <select class="form-control" name="question1" required>
-                                                    <option >Security Question 1 </option>
+                                                    <option selected="true" disabled="disabled">Security Question 1 </option>
                                                     <option value="What is the first name of your best friend in high school?">What is the first name of your best friend in high school?</option>
                                                     <option value="What was the name of your first pet?">What was the name of your first pet?</option>
                                                     <option value="What was the first thing you learned to cook?">What was the first thing you learned to cook?</option>
@@ -211,11 +198,13 @@
                                                 </select>                                                
                                             </div>
                                             <div class="form-group">
+                                                <label for="profile_pic" style="font-size:14px;">Answer</label>
                                                 <input type="text" class="form-control" id="ans1" name="ans1" placeholder="Answer" required>
                                             </div>                                            
                                             <div class="form-group">
+                                                <label for="profile_pic" style="font-size:14px;">Question 2</label>
                                                 <select class="form-control" name="question2" required>
-                                                    <option >Security Question 2 </option>
+                                                    <option selected="true" disabled="disabled">Security Question 2 </option>
                                                     <option value="What is your dream job?">What is your dream job?</option>
                                                     <option value="What is your favorite children's book?">What is your favorite children's book?</option>
                                                     <option value="Who was your favorite film star or character in school?">Who was your favorite film star or character in school?</option>
@@ -223,26 +212,30 @@
                                                 </select>                                                
                                             </div>    
                                             <div class="form-group">
+                                                    <label for="profile_pic" style="font-size:14px;">Answer</label>
                                                     <input type="text" class="form-control" id="ans2" name="ans2" placeholder="Answer" required>
                                             </div>  
                                             <div class="form-group">
+                                                <label for="profile_pic" style="font-size:14px;">Question 3</label>
                                                 <select class="form-control" name="question3" required>
-                                                    <option >Security Question 3 </option>
+                                                    <option selected="true" disabled="disabled">Security Question 3 </option>
                                                     <option value="In what city is your parents meet?">In what city is your parents meet?</option>
                                                     <option value="What is the name of the street where you grew?">What is the name of the street where you grew?</option>
                                                     <option value="What is the name of firth beach you visited?">What is the name of firth beach you visited?</option>
                                                     <option value="What is the name of your favorite sports team?">What is the name of your favorite sports team?</option>
                                                 </select>                                                
-                                            </div>
-                                            </fieldset>
+                                            </div>                                           
                                             <div class="form-group">
+                                                    <label for="profile_pic" style="font-size:14px;">Answer</label>
                                                     <input type="text" class="form-control" id="ans3" name="ans3" placeholder="Answer" required>
                                             </div> 
+                                        </fieldset>
                                             <div class="form-group" align="left">
-                                                <input type="checkbox" name="accept" value="accept" oninvalid="this.setCustomValidity('Please accept policies')"  id="myBtn" > Accept policies.<br>
+                                                <input type="checkbox" name="accept"  oninvalid="this.setCustomValidity('Please accept policies')" onclick="check()"  id="myBtn" > Accept policies.<br>
+                                                
                                             </div>                              
                                             <div class="form-group">                                       
-                                				<input type="submit" id="Register" value="Register" name="Register" class="btn btn-primary pull-right" >
+                                				<input type="submit" id="Register" value="Register" name="Register" class="btn btn-primary pull-right" disabled>
 											</div>
 								 
                                     </form>
@@ -282,7 +275,8 @@
             </div>
         </div>
     </section><!-- end of about section -->
-    
+                                                <p id="test"></p>
+                                                <p id="test1"></p>
 	<!-- footer starts here -->
 	<footer class="footer clearfix" style="margin-top:50px; border-top: 1px solid rgb(255, 255, 255)">
 		<div class="container">
@@ -308,15 +302,25 @@
     
       <script>
             // Get the modal
-            var modal = document.getElementById('myModal');
+            var showimg = document.getElementById("img").value;
+            document.getElementById("showimgssn").innerHTML=showimg;
+
+            //function check checkbox policies
+            function check() {
+                var checkbox = document.getElementById("myBtn").checked;
+                
+                if(checkbox == true){
+                    document.getElementById("Register").removeAttribute("disabled");
+                    
+                    var modal = document.getElementById('myModal');
             // Get the button that opens the modal
             var btn = document.getElementById("myBtn");
             // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("c")[0];
             // When the user clicks the button, open the modal 
-            btn.onclick = function() {
+          
                 modal.style.display = "block";
-            }
+            
             // When the user clicks on <span> (x), close the modal
             span.onclick = function() {
                 modal.style.display = "none";
@@ -326,6 +330,14 @@
                 if (event.target == modal) {
                     modal.style.display = "none";
                 }
+            }
+                }
+                else{
+                    document.getElementById("Register").disabled = true;
+                    
+                }
+                
+
             }
             </script>
 </body>

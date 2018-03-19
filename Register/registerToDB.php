@@ -1,5 +1,7 @@
-<?php 
-include "../connect-localhost.php";
+<?php
+include "../connect.php"
+// include "../connect-localhost.php"
+
 
 $name=$_POST["name"];
 $ssn=$_POST["ssn"];
@@ -19,7 +21,7 @@ $ans3=$_POST["ans3"];
 
 
 if($password == $confirmpassword){
-    $stmt = $pdo->prepare("INSERT INTO preparemember  (name, ssn, imgSSN, email,username,password,confirmpassword,birthday,question1,ans1,question2,ans2,question3,ans3,status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $pdo->prepare("INSERT INTO preparemember  (name, ssn, imgSSN, email,username,password,confirmpassword,birthday,question1,ans1,question2,ans2,question3,ans3,status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)");
         $stmt->bindParam(1, $name);
         $stmt->bindParam(2, $ssn);
         $stmt->bindParam(3, $imgSSN);
@@ -34,12 +36,13 @@ if($password == $confirmpassword){
         $stmt->bindParam(12, $ans2);
         $stmt->bindParam(13, $question3);
         $stmt->bindParam(14, $ans3);
-        $stmt->bindParam(15, 0);
+        
         $stmt->execute(); 
-    $tmp_name = $_FILES["imgSSN"]["tmp_name"]
-    //$uploads_dir = "../img/ssn";
-    move_uploaded_file ($tmp_name, "../img/ssn/$ssn");
-    header('Location: http://localhost/LoveDog/Register/correct_registation.html');
+    $tmp_name = $_FILES["imgSSN"]["tmp_name"];
+    // //$uploads_dir = "../img/ssn";
+    move_uploaded_file ($tmp_name, "../img/ssn/".$ssn.$imgSSN);
+    // header('Location: http://localhost/LoveDog/Register/correct_registation.html');
+    header('Location: http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registation.html');
 }else{
     
 }
