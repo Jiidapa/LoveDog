@@ -18,7 +18,41 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
-	<script></script>
+	<style>
+			.dropbtn1 {
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+		}
+		
+		.dropdown1 {
+			position: relative;
+			display: inline-block;
+		}
+		
+		.dropdown-content1 {
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+		
+		.dropdown-content1 a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		
+		.dropdown-content1 a:hover {background-color: #ddd}
+		
+		.dropdown1:hover .dropdown-content1 {
+			display: block;
+		}
+		</style>
 </head>
 <body>
 	
@@ -45,12 +79,11 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<nav class="navbar navbar-default">
 					      <ul class="nav navbar-nav navbar-left">
-							<!--<li><a class="menu" href="../index.html" >Home</a></li> -->
-							<li><a data-toggle="dropdown" href="#" class="active dropdown-th">Home&nbsp;&nbsp;|</a>
-								<ul class="dropdown-menu">
+							<li class="dropdown1"><a data-toggle="dropdown" href="#" class="dropbtn1">Home&nbsp;&nbsp;|</a>
+								<ul class="dropdown-content1">
 									<li class=""><a href="News/FormNews.php" >News and Announcement</a></li>
-								  </ul>							
-							</li>
+								</ul>							
+                            </li>
 							<li><a class="menu" href="#" >Knowledge Resource&nbsp;&nbsp;|</a></li> 
 							<li><a class="menu" href="#" >Events&nbsp;&nbsp;|</a></li> 
 					        <li><a class="menu" href="#">About us</a></li>

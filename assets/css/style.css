@@ -932,12 +932,7 @@ responsive area
 
 /*เริ่มเขียนเอง*/
     /* Modal Content */
-
-    .box1 { width: 600 px ; 
-        height: 130 px ;  
-        margin: 20 px ; 
-        padding: 20 px ;
-    .modal-content {
+    /* .modal-content {
         background-color: #fefefe;
         margin-top: 30px;
         margin-left: auto;
@@ -945,7 +940,7 @@ responsive area
         padding-top: 10px;
         border: 1px solid #888;
         width: 80%;
-    }
+    } */
 
     /* The Close Button */
     /* .close {
@@ -962,7 +957,6 @@ responsive area
         text-decoration: none;
         cursor: pointer;
     }  */
-
     .c {
         color: black;
         margin: 10px;

@@ -6541,6 +6541,7 @@ button.close {
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
     outline: 0
+
 }
 
 .modal.fade .modal-dialog {
@@ -6581,7 +6582,7 @@ button.close {
     border-radius: 6px;
     outline: 0;
     -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
-    box-shadow: 0 3px 9px rgba(0, 0, 0, .5)
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
 }
 
 .modal-backdrop {
