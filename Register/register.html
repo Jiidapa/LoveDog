@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html lang="en"> 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -156,34 +156,38 @@
                                         <legend>Profile</legend>															
     
                                             <div class="form-group">
+                                                <label for="profile_pic" style="font-size:14px;">Firstname-Lastname</label>
                                                 <input type="text" class="form-control" id="name" name="name" placeholder="Firstname-Lastname" required pattern="[a-zA-Z]+[ ][a-zA-Z]+" title="First and last name must be contains letters(Eng)">
                                             </div>
                                             <div class="form-group">
+                                                <label for="profile_pic" style="font-size:14px;">Identification card/Passport id</label>
                                                 <input type="text" class="form-control" id="ssn" name="ssn" placeholder="Identification card/Passport id" required pattern="[0-9]{13}|[A-Z]{1}[0-9]{6}|[A-Z]{2}[0-9]{7}" title="Incorrect pattern">
                                             </div>
                                             <div class="form-group" style="margin-bottom: 0px">
                                                 <label for="profile_pic" style="font-size:14px;">Choose file Identification card/Passport id to upload</label>                                          
-<!--
-                                                <input type="file" name="imgSSN"  accept=".png, .jpg, .jpeg" id="imgSSN" name="imgSSN" multiple required title="Image must be .jpg format" onchange="readURL(this);" style="color: transparent;">
-                                                <img id="blah" src="#" alt="your image" style="margin-bottom: 10px;margin-top: 10px">
--->
+
+                                                <!-- <input type="file" name="imgSSN"  value="Choose file" accept=".png, .jpg, .jpeg" id="imgSSN"  required title="Image must be .jpg format" onchange="readURL(this);" style="color: transparent;">
+                                                <img id="blah" src="#" alt="your image" style="margin-bottom: 10px;margin-top: 10px"> -->
                                                 
-                                                <!-- <input type="file" name="imgSSN" style="display:none" accept=".png, .jpg, .jpeg" id="imgSSN" name="imgSSN" multiple required title="Image must be .jpg format">
-                                                <input type="text" name="uploadtext" onkeydown="upload.value=uploadtext.value " class="form-control" style="margin-top: 5px;margin-bottom: 5px">
-                                                <input type="button" name="uploadbutton" value="choose file" onclick="upload.click()" onmouseout="uploadtext.value=upload.value"
-                                                style="margin-bottom: 10px;"> -->
-                                                
+                                                <input type="file" name="upload" style="display:none" accept=".png, .jpg, .jpeg" required title="Image must be .jpg format" onchange="readURL(this);" style="color: transparent;"/>
+                                                <input type="text" class="form-control" name="uploadtext" onkeydown="upload.value=uploadtext.value " />
+                                                <input type="button" name="uploadbutton" value="choose file" onclick="upload.click()" onmouseout="uploadtext.value=upload.value" style="margin-bottom: 10px;margin-top: 10px"/>
+
                                             </div>
                                             <div class="form-group">
+                                                    <label for="profile_pic" style="font-size:14px;">Email</label>
                                                 <input type="email" class="form-control" id="email" name="email" placeholder="Email" required title="Email must be @ ex.bananasoft@example.com">
                                             </div>  
                                             <div class="form-group">
+                                                <label for="profile_pic" style="font-size:14px;">Username</label>
                                                 <input type="text" class="form-control" id="username" name="username" placeholder="Username" required pattern="[ก-๙A-Za-z0-9-_]{1,}" title="Please type a username must be contains letters(Thai,Eng), numbers, - and _ ">
                                             </div>
                                             <div class="form-group">
+                                                <label for="profile_pic" style="font-size:14px;">Password</label>
                                                 <input type="password" class="form-control" id="password" name="password" placeholder="Password" required pattern="[A-Za-z0-9-_]{16,}" title="Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _">
                                             </div>                                            
                                             <div class="form-group">
+                                                <label for="profile_pic" style="font-size:14px;">Confirm password</label>
                                                 <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" required pattern="[A-Za-z0-9-_]{16,}" title="Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _" onchange ="checkPassword()">
                                             </div>
                                             <div class="form-group" id="result" style="color:red;"></div>
@@ -235,7 +239,7 @@
                                                     <input type="text" class="form-control" id="ans3" name="ans3" placeholder="Answer" required>
                                             </div> 
                                             <div class="form-group" align="left">
-                                                <input type="checkbox" name="accept" value="accept" oninvalid="this.setCustomValidity('Please accept policies')"  id="myBtn" required> Accept policies.<br>
+                                                <input type="checkbox" name="accept" value="accept" oninvalid="this.setCustomValidity('Please accept policies')"  id="myBtn" > Accept policies.<br>
                                             </div>                              
                                             <div class="form-group">                                       
                                 				<input type="submit" id="Register" value="Register" name="Register" class="btn btn-primary pull-right" >
