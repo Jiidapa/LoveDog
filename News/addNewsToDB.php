@@ -1,6 +1,6 @@
 <?php
-include "../connect.php"
-// include "../connect-localhost.php"
+// include "../connect.php"
+include "../connect-localhost.php"
 ?>
 
 <?php 
@@ -9,9 +9,7 @@ chmod("../img/imgAnno/", 777);
 $topic = $_POST['Topic'];
 $content = $_POST['Content'];
 $date = $_POST['Date'];
-if($topic == ''){
-    header('Location: http://10.199.66.227/SoftEn2018/Sec01_BS/News/FormNews.php?message=2'); 
-}else{
+
 $stmt = $pdo->prepare("INSERT INTO news  (Topic, Content, Date) VALUES (?, ?, ?)");
 $stmt->bindParam(1, $topic);
 $stmt->bindParam(2, $content);
@@ -47,7 +45,7 @@ echo $newsid;
                 move_uploaded_file ($tmp_name, "$uploads_dir/".$name);
             }
         }
-    //    header('Location: http://localhost/LoveDog 2/News/FormNews.php?message=1');
-    header('Location: http://10.199.66.227/SoftEn2018/Sec01_BS/News/FormNews.php?message=1');
-}
+       header('Location: http://localhost/LoveDog/News/FormNews.php?message=1');
+    // header('Location: http://10.199.66.227/SoftEn2018/Sec01_BS/News/FormNews.php?message=1');
+
 ?>

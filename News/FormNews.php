@@ -113,7 +113,7 @@
                 <div class="col-sm-6 col-md-6">
                     <!--middle -->
                             <div class="form-area">  
-                                <form role="form" action="addNewsToDB.php" method="post" enctype="multipart/form-data">
+                                <form role="form" action="addNewsToDB.php" method="post" enctype="multipart/form-data" onsubmit="return checkTopic()">
                                 <br style="clear:both">
 											<h3 style="margin-bottom: 25px; text-align: center;">เพิ่มข่าวหรือประกาศ</h3>	
 											<div class="form-group">
@@ -123,14 +123,13 @@
 												
 														if($message == 1 ){
 															echo "<p style='color:green'>เพิ่มข่าวเรียบร้อยแล้ว</p>";
-														}else{
-															echo "<p style='color:red'>กรุณาใส่หัวข้อข่าว</p>";
-														}
+														}														
 												}												
-												?></p>
-                                            </div>																				
+												?></p> 
+											</div>	
+											<div class="form-group" id="alertTopic" style="color:red"></div>																			
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="Topic" name="Topic" placeholder="หัวข้อ" >
+                                                <input type="text" class="form-control" id="Topic" name="Topic" placeholder="หัวข้อ" onblur="checkTopic()" >
                                             </div>
                                             <div class="form-group">
                                                 <textarea class="form-control" type="textarea" id="Content" placeholder="รายละเอียด" maxlength="500" rows="7" name="Content"></textarea>                                                         
