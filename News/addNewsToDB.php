@@ -44,7 +44,7 @@ echo $newsid;
                 $stmt->bindParam(2, $date);
                 $stmt->bindParam(3, $newsid);
                 $stmt->execute();
-                move_uploaded_file ($tmp_name, "$uploads_dir/$name");
+                move_uploaded_file ($tmp_name, "$uploads_dir/".$name);
             }
         }
     //    header('Location: http://localhost/LoveDog 2/News/FormNews.php?message=1');
