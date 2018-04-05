@@ -126,7 +126,7 @@
                                         <legend>Profile</legend>													
                                             <div class="form-group">
                                                 <label for="profile_pic" style="font-size:14px;">Firstname - Lastname<span style="color:red">*</span></label>
-                                                <input type="text" class="form-control" id="name" name="name" placeholder="Firstname - Lastname" onblur="checkonfocus()" onkeyup ="checkName()">                                    
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="Firstname - Lastname" onblur="checkonfocus()">                                    
                                             </div>
                                             <div id="fullNameCheck" style="color:red"></div>
                                             <!-- style="display:none;" -->
@@ -134,7 +134,7 @@
                                             <div id="alertName" style="color:red"></div>
                                             <div class="form-group">
                                                 <label for="profile_pic" style="font-size:14px;">Identification number/Passport number<span style="color:red">*</span></label>
-                                                <input type="text" class="form-control" id="ssn" name="ssn" onblur="checkonfocus()" placeholder="Identification card/Passport number" >
+                                                <input type="text"  maxlength="13"  class="form-control" id="ssn" name="ssn" onblur="checkonfocus()" placeholder="Identification card/Passport number" >
                                             </div>
                                             <div id="alertSSN" style="color:red"></div>
                                             <div class="form-group" style="margin-bottom: 0px">
@@ -159,7 +159,7 @@
                                             </div>
                                             <div id="alertUsername" style="color:red"></div> 
                                             <div id="usernameCheck" style="color:red"></div>
-                                            <input type="text" style="display:none;" value="" id="usercheck"></p>
+                                            <input type="text" style="display:none;" id="usercheck"></p>
                                             <div class="form-group">
                                                 <label for="profile_pic" style="font-size:14px;">Password<span style="color:red">*</span></label>
                                                 <input type="password" class="form-control" id="password" onblur="checkonfocus()" name="password" placeholder="Password" >
@@ -173,7 +173,7 @@
                                             <div class="form-group" id="result" style="color:red;"></div>
                                             <div class="form-group">
                                                 <label for="profile_pic" style="font-size:14px;">Birthday<span style="color:red">*</span></label>
-                                                <input class="form-control" id="birthday" name="birthday" onblur="checkonfocus()" placeholder="Birthday" type="text"   onfocus="(this.type='date')">
+                                                <input class="form-control" id="birthday" name="birthday" onblur="checkonfocus();" placeholder="Birthday" type="text"   onfocus="(this.type='date')">
                                              </div>  
                                              <div id="alertBirthday" style="color:red"></div>   
                                     </fieldset>         
@@ -229,11 +229,11 @@
                                             <div id="alertAns3" style="color:red"></div>
                                         </fieldset>
                                             <div class="form-group" align="left">
-                                                <input type="checkbox" name="accept"  id="myBtn" > Accept <a  href="#" onclick="check()">policies.</a><br> 
+                                                <input type="checkbox" name="accept"  id="myBtn" > Accept <a  href="#" id="policies" onclick="check()">policies.</a><br> 
                                             </div>      
                                             <div id="alertAccept" style="color:red" align="left"></div>                     
                                             <div class="form-group">                                       
-                                				<input type="submit" id="Register" value="Register" name="Register" class="btn btn-primary pull-right"  >
+                                				<input type="submit" id="Register" value="Register" name="Register" class="btn btn-primary pull-right" onclick="checkName()" >
 											</div>
 								 
                                     </form>
@@ -340,6 +340,7 @@
         function showUsernameStatus() {
          var check = document.getElementById("usercheck");
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            console.log(xmlHttp.responseText);
         if (xmlHttp.responseText == "fail") {
         // UserCheck="fail";
         console.log("fail");
@@ -365,17 +366,23 @@
          xml = new XMLHttpRequest();
          xml.onreadystatechange = show;
          var name = document.getElementById("name").value;
+         var dateB = document.getElementById("birthday").value;
         //  var test = document.getElementById("usercheck").value;
-         var url2 = "checkName.php?name="+name;
+         var url2 = "checkName.php?name="+name+"&date="+dateB;
          xml.open("GET", url2);
          xml.send();
         // console.log(test);
+        console.log(name);
+            console.log(dateB);
+            console.log(url2);
         }
 
         function show() {
+           
          var checkFullName = document.getElementById("namecheck");
         if (xml.readyState == 4 && xml.status == 200) {
             console.log(xml.responseText);
+            
         if (xml.responseText == "fail") {
         // UserCheck="fail";
         console.log("fail");
@@ -389,6 +396,10 @@
         // console.log(checkFullName.value);
         // console.log( document.getElementById("namecheck").value);
         }
+        }
+
+        function checkDate(){
+            console.log("Test");
         }
     </script>
 </body>

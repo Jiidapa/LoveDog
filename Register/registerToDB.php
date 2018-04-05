@@ -1,6 +1,6 @@
 <?php
-// include "../connect.php";
-include "../connect-localhost.php";
+include "../connect.php";
+// include "../connect-localhost.php";
 
 
 $Name=$_POST['name'];
@@ -97,7 +97,7 @@ move_uploaded_file ($tmp_name, "$uploads_dir".$Ssn.$ImgSSN);
     // move_uploaded_file ($tmp_name, "$uploads_dir".$Ssn.$ImgSSN);
 
     // header('Location: http://localhost/LoveDog/Register/correct_registation.html');
-    // header('Location: http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registation.html');
+    header('Location: http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registation.html');
 
 ?>
 
