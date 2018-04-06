@@ -577,44 +577,6 @@ function checkonfocus(){
     // checkthis();
 }
 
-function checkPassword(){
-    var password = document.getElementById("password");
-    var confirmpassword = document.getElementById("confirmpassword");
-    var result = document.getElementById("result");
-    if(password.value==confirmpassword.value){
-        console.log(password);
-        console.log(confirmpassword);
-        console.log("pass");
-        result.innerHTML = " ";
-    }else{
-        console.log(password);
-        console.log(confirmpassword);
-        console.log("nomach");
-        result.innerHTML = "Passwords do not match";
-    }
 
 
-}
-
-function checkTopic(){
-    
-    var Topic =document.getElementById("Topic").value;
-    const CCtopic = Topic;
-    const regexTopic = /[ก-๙a-zA-Z0-9]+/g;
-    let mTopic =regexTopic.exec(CCtopic);
-    var status=false;
-    console.log(mTopic);
-    if(Topic == null || Topic == ""){
-        document.getElementById("alertTopic").innerHTML = "กรุณากรอกหัวข้อข่าว";
-        status = false;
-    }else if(mTopic== null){
-        document.getElementById("alertTopic").innerHTML = "กรุณากรอกหัวข้อข่าว";
-        // return false;
-        status=false;
-    }else{
-        document.getElementById("alertTopic").innerHTML = "";
-        status=true;
-    }
-    return status;
-}
 

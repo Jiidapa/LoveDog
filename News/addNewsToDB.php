@@ -1,6 +1,6 @@
 <?php
-include "../connect.php"
-// include "../connect-localhost.php"
+// include "../connect.php"
+include "../connect-localhost.php"
 ?>
 
 <?php 
@@ -45,7 +45,7 @@ echo $newsid;
                 move_uploaded_file ($tmp_name, "$uploads_dir/".$name);
             }
         }
-    //    header('Location: http://localhost/LoveDog/News/FormNews.php?message=1');
-    header('Location: http://10.199.66.227/SoftEn2018/Sec01_BS/News/FormNews.php?message=1');
+       header('Location: http://localhost/LoveDog/News/FormNews.php?message=1');
+    // header('Location: http://10.199.66.227/SoftEn2018/Sec01_BS/News/FormNews.php?message=1');
 
 ?>
